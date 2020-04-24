@@ -1,0 +1,17 @@
+<h1>Héroes <small>Marvel y DC </small></h1>
+<h2>Buscando: <small>{{parametroBucado}} </small></h2>
+<div class="row animated fadeIn fast" *ngIf="heroe.length==0">
+    <div class="col-md-12">
+        <div class="alert alert-info" role="alert">
+          No existe resultado con los parametros de busqueda: {{parametroBucado}}
+        </div>
+    </div>
+  </div>
+
+<hr>
+<div class="card-columns">
+
+
+  <app-heroe-tarjeta [heroe]="heroe" [indice]="heroe.idx" *ngFor="let heroe of heroe"></app-heroe-tarjeta>
+
+</div>
